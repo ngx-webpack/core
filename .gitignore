@@ -1,0 +1,9 @@
+.idea
+node_modules
+npm-debug.log
+dist
+build
+dll
+*.ngfactory.ts
+*.ngstyle.ts
+*.ngsummary.json

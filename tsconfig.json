@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "mapRoot": "",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers": true,
+    "outDir": "./build",
+    "rootDir": "./src/app",
+    "skipLibCheck": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "types": [
+      "node",
+      "jasmine"
+    ],
+    "lib": [
+      "dom",
+      "es2015"
+    ]
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/app/test.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
+}
