@@ -1,4 +1,4 @@
-# ngx-webpack
+# @ngx-webpack/core
 [![Build Status](https://travis-ci.org/blacksonic/ngx-webpack.svg?branch=master)](https://travis-ci.org/blacksonic/ngx-webpack)
 [![Dependency Status](https://david-dm.org/blacksonic/ngx-webpack.svg)](https://david-dm.org/blacksonic/ngx-webpack)
 [![devDependency Status](https://david-dm.org/blacksonic/ngx-webpack/dev-status.svg)](https://david-dm.org/blacksonic/ngx-webpack?type=dev)
@@ -9,7 +9,7 @@ It provides npm scripts also for running the configurations in different modes.
 ### Installation
 
 ```bash
-npm install ngx-webpack --save-dev
+npm install @ngx-webpack/core --save-dev
 ```
 
 ### Usage
@@ -18,7 +18,7 @@ Create ```webpack.config.js```.
 
 ```javascript
 'use strict';
-module.exports = require('ngx-webpack').webpack();
+module.exports = require('@ngx-webpack/core').webpack();
 ```
 
 ### Modes
@@ -47,13 +47,13 @@ Suitable for usage with `karma` test runner.
 Can be activated with 
 `process.env.NODE_ENV = 'test''` or 
 `process.env.npm_lifecycle_event = 'test*'` or
-`require('ngx-webpack').webpack({ env: 'test' });`
+`require('@ngx-webpack/core').webpack({ env: 'test' });`
 
 The configuration for `karma` can also be generated.
 
 ```javascript
 'use strict';
-let karmaConfig = require('ngx-webpack').karma(require('./webpack.config'));
+let karmaConfig = require('ngx-karma').karma(require('./webpack.config'));
 
 module.exports = (config) => {
   config.set(karmaConfig);
@@ -70,7 +70,7 @@ Only bundles the application, doesn't serve it with `webpack-dev-server`.
 Can be activated with 
 `process.env.NODE_ENV = 'production''` or 
 `process.env.npm_lifecycle_event = 'build'` or
-`require('ngx-webpack').webpack({ env: 'production' });`
+`require('@ngx-webpack/core').webpack({ env: 'production' });`
 
 #### Dll generation
 
@@ -84,7 +84,7 @@ or afterwards by modifying the generated Webpack configuration.
 Here is the list of default options and a later added loader to the generated configuration.
 
 ```javascript
-let webpackConfig = require('ngx-webpack').webpack({
+let webpackConfig = require('@ngx-webpack/core').webpack({
   // For which environment the config will be generated
   // Possible values: development, test, production, install
   env: 'development',
@@ -151,6 +151,7 @@ let webpackConfig = require('ngx-webpack').webpack({
   
   // Packages to be included in vendor file next to main file
   vendors: [
+    '@angular/animations',
     '@angular/common',
     '@angular/core',
     '@angular/platform-browser',
@@ -224,16 +225,6 @@ After adding ```"scripts": { "build": "ng-build" }``` and running it,
 the generated files will appear in the ```dist``` folder. These are minified and ready for deployment.
 
 Github Pages deployment can be done with ```"scripts": { "deploy": "ng-deploy" }```.
-
-### AOT support
-
-It can be enabled with the ```--aot``` flag for both starting and building the application.
-```
-"scripts": { 
-  "start": "ng-start --aot" 
-  "deploy": "ng-deploy --aot" 
-}
-```
 
 Instead of the original endpoint ```src/app/main.ts``` it starts from ```src/app/main.aot.ts```.
 
