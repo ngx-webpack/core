@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./').webpack({ aot: true });
+module.exports = require('./').webpack();

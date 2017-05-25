@@ -1,13 +1,14 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 
 import { HelloWorldComponent } from './hello-world.component';
 
 describe('HelloWorldComponent', () => {
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HelloWorldComponent]
     });
-  });
+    TestBed.compileComponents();
+  }));
 
   it('should display title', () => {
     const fixture = TestBed.createComponent(HelloWorldComponent);
