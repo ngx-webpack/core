@@ -1,7 +1,7 @@
 # @ngx-webpack/core
-[![Build Status](https://travis-ci.org/blacksonic/ngx-webpack.svg?branch=master)](https://travis-ci.org/blacksonic/ngx-webpack)
-[![Dependency Status](https://david-dm.org/blacksonic/ngx-webpack.svg)](https://david-dm.org/blacksonic/ngx-webpack)
-[![devDependency Status](https://david-dm.org/blacksonic/ngx-webpack/dev-status.svg)](https://david-dm.org/blacksonic/ngx-webpack?type=dev)
+[![Build Status](https://travis-ci.org/ngx-webpack/core.svg?branch=master)](https://travis-ci.org/ngx-webpack/core)
+[![Dependency Status](https://david-dm.org/ngx-webpack/core.svg)](https://david-dm.org/ngx-webpack/core)
+[![devDependency Status](https://david-dm.org/ngx-webpack/core/dev-status.svg)](https://david-dm.org/ngx-webpack/core?type=dev)
 
 Generates Webpack 2 configuration for development, testing and deployment.
 It provides npm scripts also for running the configurations in different modes.
