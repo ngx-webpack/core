@@ -115,6 +115,9 @@ let webpackConfig = require('@ngx-webpack/core').webpack({
   // Whether to reload page on file changes
   liveReload: true,
   
+  // Use linting while bundling
+  continuousLinting: true,
+  
   // Generate entry index.html file or not
   indexHtml: true,
   
