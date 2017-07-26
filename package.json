@@ -1,6 +1,6 @@
 {
   "name": "@ngx-webpack/core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Customizable Webpack 2 config generator for Angular projects",
   "main": "index.js",
   "scripts": {
