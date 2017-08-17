@@ -153,6 +153,8 @@ let webpackConfig = require('@ngx-webpack/core').webpack({
   ],
   
   // Packages to be included in vendor file next to main file
+  // If false value given, skips the generation of vendor entry bundle, 
+  // polyfills have to be manually included at entry script also
   vendors: [
     '@angular/animations',
     '@angular/common',
